@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className='logo-icon'>
           <Link href="/">
             <Image
-              src='/logo-icon.svg'
+              src='/logo-icon.png'
               width={35}
               height={38.5}
               alt='logo'
@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className='logo-text'>
           <Link href="/">
             <Image
-              src='/logo-text.svg'
+              src='/logo-text.png'
               width={200}
               height={20}
               alt='logo text'
