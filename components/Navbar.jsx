@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="navbar-container">
       <div className='logo'>
         <div className='logo-icon'>
-          <a href="/"><img src='../logo-icon.svg' width={35} height={38.5}/></a>
+          <a href="/"><img src='logo-icon.svg' width={35} height={38.5}/></a>
           {/* <Link href="/">
             <Image
               src='/logo-icon.png'
@@ -41,7 +41,7 @@ const Navbar = () => {
           </Link> */}
         </div>
         <div className='logo-text'>
-        <a href="/"><img src='../logo-text.svg' width={200} height={20}/></a>
+        <a href="/"><img src='logo-text.svg' width={200} height={20}/></a>
           {/* <Link href="/">
             <Image
               src='/logo-text.png'
@@ -55,7 +55,7 @@ const Navbar = () => {
 
       <div className='small-logo'>
         <div className='logo-icon'>
-        <a href="/"><img src='../logo-icon.png' width={28} height={30.8}/></a>
+        <a href="/"><img src='logo-icon.svg' width={28} height={30.8}/></a>
           {/* <Link href="/">
             <Image
               src='/logo-icon.svg'
@@ -66,7 +66,7 @@ const Navbar = () => {
           </Link> */}
         </div>
         <div className='logo-text'>
-        <a href="/"><img src='../logo-icon.png' width={150} height={15}/></a>
+        <a href="/"><img src='logo-text.svg' width={150} height={15}/></a>
           {/* <Link href="/">
             <Image
               src='/logo-text.svg'
