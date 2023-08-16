@@ -23,7 +23,7 @@ const HeroBanner = ({ heroBanner }) => {
         </ul>
       </div>
       <div className="hero-banner-container">
-        <div className='text'>
+        <div className='left-side'>
           <p className="small-text">{heroBanner.smallText}</p>
           <h3>{heroBanner.midText}</h3>
           <h1>{heroBanner.largeText1}</h1>
@@ -31,7 +31,7 @@ const HeroBanner = ({ heroBanner }) => {
             <button type="button">{heroBanner.buttonText}</button>
           </Link>
         </div>
-        <div>
+        <div className='right-side'>
           <img src={urlFor(heroBanner.image)} alt="techybuy.lk" className="hero-banner-image" />
           <div className="desc">
             <p>{heroBanner.desc}</p>

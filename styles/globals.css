@@ -7,6 +7,7 @@ body, * {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -19,7 +20,7 @@ a {
 
 
 
-/* Marquee  */ 
+/* Marquee  */
 .marquee-text{
   font-size: 29px;
   font-weight: 600;
@@ -222,6 +223,7 @@ width: 100%;
   transition: all 0.2s ease-in-out;
   border: none;
   background-color: transparent;
+  overflow-x:visible ;
 }
 
 .cart-icon:hover{
@@ -292,33 +294,40 @@ width: 100%;
 
 /* Hero Banner */
 .hero-banner-container{
-  flex: 2;
   display: flex;
   position: relative;
-  padding: 30px;
+  justify-content: space-between;
+  padding: 20px;
+  margin-right: 10px;
   background-color: #dcdcdc;
   border-radius: 15px;
   height: 450px;
+  width: 90%;
   line-height: 0.9; 
   max-height: 450px;
+  overflow:hidden;
+}
+
+.hero-banner-container .left-side{
+  margin-left: 10px;
+  width: 60%;
 }
 
 .hero-banner-container .small-text{
   font-size: 20px;
-  padding: 15px;
-  margin-left: -10px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .hero-banner-container h3{
   font-size: 4rem;
-  margin-top: 4px;
-  padding-bottom: 10px;
+  margin: 15px;
+  padding: 5px;
 }
 
 .hero-banner-container h1{
   color: white;
-  font-size: 10em;
-  margin-left: -10px;
+  font-size: 9em;
   text-transform: uppercase;
 }
 
@@ -328,28 +337,34 @@ width: 100%;
   background-color: #f02d34;
   color: white;
   border: none;
-  margin-top: 40px;
+  margin: 40px;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  z-index:10000 !important;
+}
+
+.hero-banner-container .right-side{
+  padding: 10px;
+  margin: 10px;
+  width: 45%;
 }
 
 .hero-banner-image{
-  width: 544.5px;
-  height: 306.28125px;
-  margin-left: 35px;
+  width: 437.4px;
+  height: 220.5px;
+  margin-left: -10px;
+  margin-bottom: 10px;
 }
 
 .hero-banner-container .desc{
-position: absolute;
-right: 10%;
-bottom: 15%;
-width: 300px;
-line-height: 1.4;
-flex-direction: column;
-color: #5f5f5f;
-text-align: end;
+  position: relative;
+  margin-right: 0px;
+  margin-top: 20px;
+  width: 330px;
+  line-height: 1.4;
+  flex-direction: column;
+  color: #5f5f5f;
+  text-align: end;
 }
 
 /* Products container */
@@ -900,9 +915,9 @@ ul{
     margin-right: 5%;
   }
   .hero-banner-container .desc{
-    margin-bottom: -10px;
-    margin-right: -35px;
     width: 270px;
+    bottom: 50px;
+    right: 5%;
   }
 
   .hero-banner-container{
@@ -922,10 +937,7 @@ ul{
   .hero-banner-container button{
     margin-top: 25px;
   }
-  .desc{
-   bottom: 50px;
-   right: 10px;
-  }
+  
   .product-detail-container{
     flex-wrap: wrap;
     }
@@ -1042,4 +1054,8 @@ ul{
   flex-wrap: wrap;
   gap: 20px;
 }
+}
+
+@media screen and (max-width:500px){
+
 }
