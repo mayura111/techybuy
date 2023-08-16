@@ -18,7 +18,7 @@ const Navbar = () => {
           <div className='fb-icon'><Link href=''> <AiOutlineFacebook/></Link></div>
           <div className='insta-icon'><Link href=''><AiFillInstagram /></Link></div>
         </span>
-        <ul className='navbar-list'>
+        <ul className='header-list'>
           <Link href="/"><li>About Us</li></Link>
           <Link href="/"><li>Customer Care</li></Link>
           <Link href="/"><li>Track My Order</li></Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
         </form>
       </div>
 
-      <div className='menu'><button type="button" className="menu-icon" onClick={() => setShowCart (true)}>
+      <div className='menu'><button type="button" className="menu-icon" id='chk1'>
         <AiOutlineMenu/>
        </button>
       </div>
