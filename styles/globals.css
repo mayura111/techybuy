@@ -1006,8 +1006,6 @@ margin-top: 160px;
 .top{
   flex-wrap: wrap;
   gap: 10px;
-
-
 }
 .item-desc .bottom{
   margin-top: 30px;
@@ -1084,17 +1082,37 @@ margin-top: 160px;
 }
 
 @media screen and (max-width:600px){
+  
+  .navbar-container{
+    padding-left: 5px;
+    padding-right: 5px;
+  } 
+
+  .navbar-container .small-logo .logo-icon{
+    width: 25.2px;
+    height: 27.72px;
+    margin-left: 58px;
+  }
+
+  .navbar-container .small-logo .logo-text{
+    width: 135px;
+    height: 13.5px;
+    padding-top: 7px;
+  }
 
   .hero-banner-container{
-    height: 250px;
+    height: 230px;
+    margin: 0;
   }
 
   .hero-banner-container .hero-banner-image{
     display: flex;
     position: relative;
-    top: 25px;
-    width: 255.15px;
-    height: 143.521875px;
+    margin: 0;
+    padding-right: 0;
+    top: 40px;
+    width: 218.7px;
+    height: 112.5px;
     
   }
   .hero-banner-container .desc{
@@ -1102,11 +1120,13 @@ margin-top: 160px;
   }
 
   .hero-banner-container .left-side{
-    margin-left: 5px;
+    padding-top: 5px;
+    margin-left: 2px;
     line-height: 0.9;
   }
 
   .hero-banner-container h1{
+    padding-top: 10px;
     font-size: 50px;
   }
  .hero-banner-container h3{
@@ -1114,11 +1134,15 @@ margin-top: 160px;
   }
 
   .hero-banner-container .small-text{
-    font-size: 12.5px;
+    display: none;
   }
 
   .hero-banner-container button{
-    display: none;
+    display: flex;
+    position: absolute;
+    font-size: 15px;
+    padding: 10px;
+
   }
 
 
