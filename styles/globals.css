@@ -135,6 +135,7 @@ width: 100%;
   padding-left: 10px;
   padding-right: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* position: sticky; */
   
 }
 
@@ -150,9 +151,6 @@ width: 100%;
   height: auto;
 }
 
-.small-logo{
-  display: none;
-}
 
 .search-box{
   position: relative;
@@ -237,18 +235,30 @@ width: 100%;
 }
 
 /* Body */
-.body-container{
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+
+
+.hero-banner-container{
   display: flex;
   position: relative;
-  margin: 10px;
+  min-height: 500px;
+  max-height: 450px;
+  width: 100%;
+  margin-top: 20px;
+  margin-right: 10px;
+  overflow-x: hidden;
 }
 
 .categories-section{
+  z-index: 2;
+  position: absolute;
   width: 250px;
   height: 450px;
   background-color: #dcdcdc;
-  margin-right: 20px;
-  margin-left: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
   padding: 10px;
@@ -285,80 +295,33 @@ width: 100%;
   background-color: rgb(195, 203, 210);
 }
 
-/* Hero Banner */
-.hero-banner-container{
-  display: flex;
+.hero-banner-card{
   position: relative;
-  width: 1100px;
-  justify-content: space-between;
-  padding: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  background-color: #dcdcdc;
-  border-radius: 15px;
-  height: 450px;
-  line-height: 0.9; 
   max-height: 450px;
-  
-}
-
-.hero-banner-container .left-side{
-  margin-left: 10px;
-  width: 60%;
-}
-
-.hero-banner-container .small-text{
-  font-size: 20px;
-  margin: 20px;
-  padding: 10px;
-}
-
-.hero-banner-container h3{
-  font-size: 4rem;
-  margin: 15px;
-  padding: 5px;
-}
-
-.hero-banner-container h1{
-  color: white;
-  font-size: 9em;
-  text-transform: uppercase;
-}
-
-.hero-banner-container button{
-  border-radius: 15px;
-  padding: 10px 16px;
-  background-color: #f02d34;
-  color: white;
-  border: none;
-  margin: 40px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.hero-banner-container .right-side{
-  display: block;
-  padding: 10px;
-  margin: 10px;
+  left: 230px;
+  justify-content: center;
 }
 
 .hero-banner-image{
-  width: 437.4px;
-  height: 220.5px;
-  margin-left: -10px;
-  margin-bottom: 10px;
+  max-height: 450px;
+  min-height: 450px;
+  border-radius: 15px;
 }
 
-.hero-banner-container .desc{
-  position: relative;
-  margin-right: 0px;
-  margin-top: 20px;
-  width: 330px;
-  line-height: 1.4;
-  flex-direction: column;
-  color: #5f5f5f;
-  text-align: end;
+.hero-banner-button{
+  position: absolute;
+  border-radius: 15px;
+  padding: 10px 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  
+  z-index: 1000;
+  left: 30%;
+  top: 300px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 /* Products container */
@@ -825,21 +788,6 @@ margin-top: 160px;
 }
 
 
-@media screen and (max-width:1200px){
-
-  .hero-banner-container .desc{
-    width: 270px;
-    right: 5%;
-  }
-
-  .hero-banner-image{
-    width: 315px;
-    height: 177.1875px;
-  }
-
-}
-
-
 @media screen and (max-width:780px) {
 
   .top-header{
@@ -851,16 +799,21 @@ margin-top: 160px;
   }
 
   .logo{
-    display: none;
+    padding-left: 2px;
   }
 
-  .small-logo{
-    display: block;
-    padding: 10px;
+  .logo .logo-icon{
+    margin-left: 60px;
   }
 
-  .small-logo .logo-icon{
-    margin-left: 65px;
+  .logo .logo-icon img{
+    width: 28px;
+    height: 30.8px;
+  }
+
+  .logo .logo-text img{
+    width: 150px;
+    height: 15px;
   }
 
   .search-box{
@@ -912,59 +865,6 @@ margin-top: 160px;
     display: none;
   }
 
-  .hero-banner-container{
-    display: flex;
-    position: relative;
-    margin: 5%;
-    height: 300px;
-    max-width: 650px;
-    justify-content: space-evenly;
-  }
-
-  .hero-banner-container .right-side{
-    padding: 0;
-    margin: 0;
-    line-height: 0.9;
-  }
-
-  .hero-banner-image{
-    width: 283.5px;
-    height: 159.46875px;
-    padding-bottom: 20px;
-    padding-right: 30px;
-    margin-top: 10px;
-    margin-right: 5%;
-    margin-left: 5%;
-  }
-  .hero-banner-container .desc{
-    width: 270px;
-    bottom: 40px;
-    right: 5%;
-  }
-
-  .hero-banner-container .left-side{
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 15px;
-    line-height: 0.9;
-  }
-
-  .hero-banner-container h1{
-    font-size: 60px;
-  }
- .hero-banner-container h3{
-    font-size: 30px;
-  }
-
-  .hero-banner-container .small-text{
-    font-size: 15px;
-  }
-
-  .hero-banner-container button{
-    margin-top: 25px;
-  }
-  
   .product-detail-container{
     flex-wrap: wrap;
     }
@@ -1068,7 +968,7 @@ margin-top: 160px;
 }
 .banner-desc .right h3{
   font-size: 45px;
-}
+} 
 .banner-desc .right p{
   font-size: 18px;
 }
@@ -1084,66 +984,34 @@ margin-top: 160px;
 @media screen and (max-width:600px){
   
   .navbar-container{
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
   } 
 
-  .navbar-container .small-logo .logo-icon{
+  .logo{
+    padding-top: 15px;
+  }
+
+  .logo .logo-icon{
+    margin-left: 50px;
+  }
+
+  .logo .logo-icon img{
     width: 25.2px;
     height: 27.72px;
-    margin-left: 58px;
+
   }
 
-  .navbar-container .small-logo .logo-text{
-    width: 135px;
-    height: 13.5px;
-    padding-top: 7px;
+  .logo .logo-text img{
+    width: 130px;
+    height: 13px;
   }
 
-  .hero-banner-container{
-    height: 230px;
-    margin: 0;
-  }
+}
 
-  .hero-banner-container .hero-banner-image{
-    display: flex;
-    position: relative;
-    margin: 0;
-    padding-right: 0;
-    top: 40px;
-    width: 218.7px;
-    height: 112.5px;
-    
-  }
-  .hero-banner-container .desc{
-   display: none;
-  }
+@media screen and (max-width:400px){
 
-  .hero-banner-container .left-side{
-    padding-top: 5px;
-    margin-left: 2px;
-    line-height: 0.9;
-  }
-
-  .hero-banner-container h1{
-    padding-top: 10px;
-    font-size: 50px;
-  }
- .hero-banner-container h3{
-    font-size: 25px;
-  }
-
-  .hero-banner-container .small-text{
+  .menu-icon{
     display: none;
   }
-
-  .hero-banner-container button{
-    display: flex;
-    position: absolute;
-    font-size: 15px;
-    padding: 10px;
-
-  }
-
-
 }

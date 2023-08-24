@@ -1,11 +1,15 @@
 import React from 'react';
 
 import { client } from '../lib/client';
-import { Product, FooterBanner, HeroBanner } from '../components';
+import { Product, FooterBanner, HeroBanner, Categories } from '../components';
 
-const Home = ({ products, bannerData, promotionData }) => (
+const Home = ({ products, banners, promotionData }) => (
   <div>
-    <HeroBanner heroBanner={bannerData.length && bannerData[0]}  />
+
+    <div className="hero-banner-container">
+      <div><Categories/></div>
+      <div>{banners?.map((banner) => <HeroBanner key={banner._id} banner={banner} />)}</div>
+    </div>
     <div className="products-heading">
       <h2>Best Seller Products</h2>
       <p>speaker There are many variations passages</p>
@@ -24,13 +28,13 @@ export const getStaticProps = async () => {
   const products = await client.fetch(query);
 
   const bannerQuery = '*[_type == "banner"]';
-  const bannerData = await client.fetch(bannerQuery);
+  const banners = await client.fetch(bannerQuery);
 
   const promotionQuery = '*[_type == "promotion"]';
   const promotionData = await client.fetch(promotionQuery);
 
   return {
-    props: { products, bannerData, promotionData }
+    props: { products, banners, promotionData }
   }
 }
 

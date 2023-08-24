@@ -6,35 +6,30 @@ export default {
         {
             name: 'image',
             title: 'Image',
-            type: 'image',
+            type: 'array',
+            of: [{ type: 'image' }],
             options: {
                 hotspot: true,
-            },
+        }
         },
         {
             name: 'buttonText',
             title: 'ButtonText',
             type: 'string',
         },
-        {
-            name: 'desc',
-            title: 'Desc',
+        { 
+            name: 'name',
+            title: 'Name',
             type: 'string',
-        },
-        {
-            name: 'smallText',
-            title: 'SmallText',
-            type: 'string',
-        },
-        {
-            name: 'midText',
-            title: 'MidText',
-            type: 'string',
-        },
-        {
-            name: 'largeText1',
-            title: 'LargeText1',
-            type: 'string',
-        },
+          },
+          { 
+            name: 'bannerSlug',
+            title: 'BannerSlug',
+            type: 'slug',
+            options: {
+              source: 'name',
+              maxLength: 90,
+            }
+        }
     ],
   };
