@@ -3,12 +3,12 @@ import React from 'react';
 import { client } from '../lib/client';
 import { Product, FooterBanner, HeroBanner, Categories } from '../components';
 
-const Home = ({ products, banners, promotionData }) => (
+const Home = ({ products, promotionData }) => (
   <div>
 
     <div className="hero-banner-container">
       <div><Categories/></div>
-      <HeroBanner banner={banners && banners[0]} />
+      <HeroBanner/>
     </div>
     <div className="products-heading">
       <h2>Best Seller Products</h2>
@@ -27,14 +27,14 @@ export const getStaticProps = async () => {
   const query = '*[_type == "product"]';
   const products = await client.fetch(query);
 
-  const bannerQuery = '*[_type == "banner"]';
-  const banners = await client.fetch(bannerQuery);
+  // const bannerQuery = '*[_type == "banner"]';
+  // const banners = await client.fetch(bannerQuery);
 
   const promotionQuery = '*[_type == "promotion"]';
   const promotionData = await client.fetch(promotionQuery);
 
   return {
-    props: { products, banners, promotionData }
+    props: { products, promotionData }
   }
 }
 
