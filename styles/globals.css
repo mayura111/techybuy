@@ -235,10 +235,7 @@ width: 100%;
 }
 
 /* Body */
-.swiper {
-  width: 600px;
-  height: 300px;
-}
+
 
 
 
@@ -255,7 +252,7 @@ width: 100%;
 
 .categories-section{
   z-index: 2;
-  position: absolute;
+  position: relative;
   width: 250px;
   height: 450px;
   background-color: #dcdcdc;
@@ -298,13 +295,14 @@ width: 100%;
 .hero-banner-card{
   position: relative;
   max-height: 450px;
-  left: 230px;
   justify-content: center;
+  width: 100%;
 }
 
 .hero-banner-image{
+  max-width: 970px;
   max-height: 450px;
-  min-height: 450px;
+
   border-radius: 15px;
 }
 
