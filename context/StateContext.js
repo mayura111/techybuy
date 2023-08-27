@@ -10,6 +10,8 @@ export const StateContext = ({ children }) => {
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
 
+  const [showMenu, setShowMenu] = useState(false);
+
   let foundProduct;
   let index;
 
@@ -92,7 +94,9 @@ export const StateContext = ({ children }) => {
         onRemove,
         setCartItems,
         setTotalPrice,
-        setTotalQuantities 
+        setTotalQuantities,
+        showMenu,
+        setShowMenu
       }}
     >
       {children}

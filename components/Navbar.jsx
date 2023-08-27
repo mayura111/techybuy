@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import {AiOutlineShopping, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai'
-import { Cart } from './';
-import { useStateContext} from '../context/StateContext';
+import { Cart, DropMenu } from './';
 import { AiFillInstagram, AiOutlineFacebook } from 'react-icons/ai'
+import { useStateContext } from '../context/StateContext';
+
 
 const Navbar = () => {
-  const { showCart, setShowCart, totalQuantities } = useStateContext();
+  const { showCart, setShowCart, totalQuantities, showMenu, setShowMenu } = useStateContext();
 
   return (
     <div>
@@ -44,17 +45,18 @@ const Navbar = () => {
         </form>
       </div>
 
-      <div className='menu'><button type="button" className="menu-icon" id='chk1'>
-        <AiOutlineMenu/>
-       </button>
-      </div>
+      <DropMenu/>
 
       <div className='cart-button'><button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
         <AiOutlineShopping />
         <span className="cart-item-qty">{totalQuantities}</span>
        </button>
       </div>
+      
+
       {showCart && <Cart />}
+      
+      
       </div>
     </div>
   )

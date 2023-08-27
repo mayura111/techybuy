@@ -11,6 +11,7 @@
   "dependencies": {
     "@babel/core": "^7.22.9",
     "@mui/icons-material": "^5.14.3",
+    "@nextui-org/react": "^2.1.7",
     "@sanity/client": "^6.2.0",
     "@sanity/image-url": "^1.0.2",
     "@stripe/stripe-js": "^1.54.1",

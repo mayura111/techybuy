@@ -6,7 +6,7 @@ import { GrFormNext } from 'react-icons/gr'
 const Categories = () => {
   return (
     <div className='categories-section'>
-        <p><span className='cat-menu' id='chk1'><AiOutlineMenu/></span>Categories</p>
+        <p><span className='cat-menu'><AiOutlineMenu/></span>Categories</p>
         <ul className='cat-list'>
           <li>Mobile Accessories<span><GrFormNext/></span></li>
           <li>Audio <span><GrFormNext/></span></li>
