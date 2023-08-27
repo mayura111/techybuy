@@ -293,8 +293,8 @@ width: 100%;
 }
 
 .hero-banner-card img{
-  max-height: 450px;
-  max-width: 970px;
+  max-height: 500px;
+  width: 970px;
   border-radius: 20px;
   min-height: 450px;
   object-fit: cover;
