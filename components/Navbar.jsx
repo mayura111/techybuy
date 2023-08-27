@@ -30,10 +30,10 @@ const Navbar = () => {
       <div className="navbar-container">
       <div className='logo'>
         <div className='logo-icon'>
-          <a href="/"><img src='logo-icon.svg' width={35} height={38.5}/></a>
+          <a href="/"><img src='logo-icon.png' width={35} height={38.5}/></a>
         </div>
         <div className='logo-text'>
-        <a href="/"><img src='logo-text.svg' width={200} height={20}/></a>
+        <a href="/"><img src='logo-text.png' width={200} height={20}/></a>
         </div>
       </div>
 
