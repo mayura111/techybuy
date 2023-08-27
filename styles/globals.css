@@ -240,14 +240,15 @@ width: 100%;
   position: relative;
   padding: 10px;
   margin-top: 10px;
-  gap: 10px;
+  
   max-height: 500px;
-  overflow-x: hidden;
+  
 }
 
 .categories-section{
   z-index: 2;
   position: relative;
+  margin-right: 10px;
   width: 250px;
   height: 450px;
   background-color: #dcdcdc;
